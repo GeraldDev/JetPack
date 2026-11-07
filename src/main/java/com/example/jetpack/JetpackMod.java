@@ -85,8 +85,7 @@ public class JetpackMod {
         if (!(chest.getItem() instanceof JetpackItem) || JetpackItem.isEmpty(chest)) return;
 
         player.fallDistance = 0;
-        player.connection.resetFlyingTicks(); // stops "Flying is not enabled on this server" kicks
-
+       
         if (player.tickCount % JetpackItem.TICKS_PER_DURABILITY == 0) {
             chest.hurtAndBreak(1, player, EquipmentSlot.CHEST);
         }
